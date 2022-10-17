@@ -2,13 +2,14 @@ package edu.vhinny.desafioPoo.dominio;
 
 import java.time.LocalDate;
 
-public abstract class Mentoria extends Conteudo{
+public  class Mentoria extends Conteudo{
+    private LocalDate data; //bp: colocar private nos atributs da classe
     @Override
     public double calcularXP(){
         return XP_PADRAO+20d;
     }
 
-    private LocalDate data; //bp: colocar private nos atributs da classe
+
 
     public Mentoria() {
     }

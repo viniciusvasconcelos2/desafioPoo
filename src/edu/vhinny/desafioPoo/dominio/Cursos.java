@@ -1,11 +1,13 @@
 package edu.vhinny.desafioPoo.dominio;
 
-public abstract class Cursos extends Conteudo{
+public  class Cursos extends Conteudo{
+    private int cargaHoraria;
+
     @Override
     public double calcularXP(){
         return XP_PADRAO*cargaHoraria;
     }
-    private int cargaHoraria;
+
 
     public Cursos() {
     }
