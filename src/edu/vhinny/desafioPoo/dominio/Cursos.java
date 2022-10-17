@@ -1,28 +1,15 @@
 package edu.vhinny.desafioPoo.dominio;
 
-public class Cursos {
-    private String titulo;
-    private  String descricao;
+public abstract class Cursos extends Conteudo{
+    @Override
+    public double calcularXP(){
+        return XP_PADRAO*cargaHoraria;
+    }
     private int cargaHoraria;
 
     public Cursos() {
     }
 
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
 
     public int getCargaHoraria() {
         return cargaHoraria;
@@ -35,8 +22,8 @@ public class Cursos {
     @Override
     public String toString() {
         return "Cursos{" +
-                "titulo='" + titulo + '\'' +
-                ", descricao='" + descricao + '\'' +
+                "titulo='" + getTitulo() + '\'' +
+                ", descricao='" + getDescricao() + '\'' +
                 ", cargaHoraria=" + cargaHoraria +
                 '}';
     }
